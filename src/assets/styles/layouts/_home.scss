@@ -152,8 +152,8 @@ body {
 		}
 		&__card {
 			width: 80%;
-			grid-template-columns: 1fr;
 			justify-self: center;
+			grid-template-columns: 1fr;
 			&:nth-child(odd) {
 				margin-left: 4rem;
 			}
@@ -174,7 +174,7 @@ body {
 		@include title-h3-footer();
 	}
 	&__text {
-		padding: 1rem;
+		padding: 1rem 1rem 2rem 1rem;
 		color: $color-light;
 	}
 	&__link {
