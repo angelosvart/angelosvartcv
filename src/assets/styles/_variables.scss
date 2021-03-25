@@ -1,8 +1,14 @@
 @use "sass:color";
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$font-family-serif: "Georgia", "Times New Roman", serif;
+/*Fonts*/
+$font-family-main: 'Lato', sans-serif;
+$font-family-title: 'Yanone Kaffeesatz', sans-serif;
 
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+
+/*Colors*/
+$color-main: #303744;
+$color-light: #f9faf9;
+$color-darker: #a0a7a4;
+$color-dark-shadow: color.scale($color-light, $lightness: -20%);
+$color-light-shadow: color.scale($color-light, $lightness: 99%);
+$color-highlight: #c74168;

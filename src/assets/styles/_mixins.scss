@@ -1,0 +1,75 @@
+@mixin title-h1() {
+	font-family: $font-family-title;
+	font-size: clamp(5rem, 3.3797rem + 8.1013vw, 13rem);
+	letter-spacing: 3px;
+	color: $color-main;
+}
+
+@mixin title-h2() {
+	font-family: $font-family-title;
+	font-size: clamp(2rem, 1.5949rem + 2.0253vw, 4rem);
+	letter-spacing: 1px;
+	color: $color-main;
+	margin-top: 1rem;
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		width: 5rem;
+		height: 0.2rem;
+		top: -1rem;
+		background-color: $color-highlight;
+	}
+}
+
+@mixin title-h3() {
+	font-family: $font-family-title;
+	font-size: clamp(2.5rem, 2.3987rem + 0.5063vw, 3rem);
+	letter-spacing: 4px;
+	font-weight: 300;
+	color: $color-main;
+	margin: 1rem 0;
+	position: relative;
+	&:after {
+		content: "";
+		position: absolute;
+		width: 60vw;
+		height: 0.2rem;
+		bottom: -0.5rem;
+		right: 0;
+		background-color: $color-highlight;
+		@media (min-width: 768px) {
+			width: 80vw;
+		}
+	}
+}
+
+@mixin title-h3-footer() {
+	font-family: $font-family-title;
+	font-size: clamp(2rem, 1.8987rem + 0.5063vw, 2.5rem);
+	letter-spacing: 4px;
+	font-weight: 300;
+	color: $color-light;
+	margin: 1rem 3rem 1rem 0;
+	position: relative;
+	text-align: right;
+	&:after {
+		content: "";
+		position: absolute;
+		width: 80vw;
+		height: 0.2rem;
+		bottom: -0.5rem;
+		left: -10vw;
+		background-color: $color-light;
+		@media (min-width: 768px) {
+			width: 90vw;
+		}
+	}
+}
+
+@mixin title-h4() {
+	font-family: $font-family-main;
+	font-size: clamp(1.3rem, 1.2190rem + 0.4051vw, 1.7rem);
+	letter-spacing: 1px;
+	color: $color-highlight;
+}

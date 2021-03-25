@@ -1,21 +1,155 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
-  </head>
-  <body>
-    <img src="./assets/images/logo.png" alt="Universitat Oberta de Catalunya" class="uoc-logo">
-    <h1 class="uoc-title">Hello, UOC!</h1>
-    <p>
-      This is a starter template for the Advanced HTML and CSS Tools courses
-      from the Master's Program in Multimedia Applications and the Master's
-      Program in Web App and Website Development at the Universitat Oberta de
-      Catalunya.
-    </p>
-    <script src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-  </body>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+		<script defer src="/node_modules/@fortawesome/fontawesome-free/js/solid.js"></script>
+		<script defer src="/node_modules/@fortawesome/fontawesome-free/js/brands.js"></script>
+		<script defer src="/node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"></script>
+		<title>Angelo Svart | CV</title>
+	</head>
+	<body>
+		<header class="headerContainer">
+			<h1 class="headerContainer__mainTitle">Angelo Svart</h1>
+			<h2 class="headerContainer__subTitle">Front-end Web Developer</h2>
+			<a href="#mainContainer" class="headerContainer__arrow">
+				<i class="fas fa-angle-double-down"></i>
+			</a>
+		</header>
+			
+		
+		<main class="mainContainer" id="mainContainer">
+			<nav class="navigationMenu">
+				<ul class="navigationMenu__list">
+					<li class="navigationMenu__listItem"><a href="#professional-experience">Professional experience</a></li>
+					<li class="navigationMenu__listItem"><a href="#education">Education</a></li>
+					<li class="navigationMenu__listItem"><a href="#languages">Languages</a></li>
+					<li class="navigationMenu__listItem"><a href="#footer">Contact</a></li>
+				</ul>
+			</nav>
+			
+			<section class="mainContainer__section" id="professional-experience">
+				<h3 class="mainContainer__title">Profesional experience</h3>
+				<div class="mainContainer__card">
+					<h4 class="mainContainer__cardTitle">Bodas.net</h4>
+					<p class="mainContainer__subTitle">Front-end Web Developer</p>
+					<p class="mainContainer__date">January 2021 – Today</p>
+					<p>Working on the Bodas.net and the rest of the company's international sites using HTML5, CSS3, SASS, Javascript ES6</p>
+				</div>
+
+				<div class="mainContainer__card">
+					<h4 class="mainContainer__cardTitle">Transperfect Translations</h4>
+					<p class="mainContainer__subTitle">Front-end Web Developer</p>
+					<p class="mainContainer__date">January 2016 – December 2020</p>
+					<ul class="mainContainer__list">
+						<li>Developing front-end solutions adapted to different websites that use a proxy localization system. Using HTML5, CSS3, Javascript/jQuery and other frameworks and working on a Linux command-line interface</li>
+						<li>Troubleshooting and bug-fixing of localized websites. Using: JIRA, Confluence, SVN and internal tools</li>
+						<li>Planning and preparing website localization projects</li>
+						<li>Automation and scripting of content acquisition processes</li>
+						<li>Supporting internal Production and Client Services departments on web projects</li>
+						<li>Supporting external Clients in order to optimize web projects and processes, including localized SEO optimization</li>
+					</ul>
+				</div>
+
+				<div class="mainContainer__card">
+					<h4 class="mainContainer__cardTitle">eDreams</h4>
+					<p class="mainContainer__subTitle">Travel Agent</p>
+					<p class="mainContainer__date">February 2015 – January 2016</p>
+					<p>Pre and Post-sale customer support, involuntary and voluntary flight modifications/cancellations via Amadeus GDS and low-cost booking engines</p>
+				</div>
+				
+				<div class="mainContainer__card">
+					<h4 class="mainContainer__cardTitle">Teleperformance Greece</h4>
+					<p class="mainContainer__subTitle">T1 Helpdesk and Technical Support</p>
+					<p class="mainContainer__date">September 2013 – December 2014</p>
+					<p>Technical support via email, chat and remote assistance for the Skype application</p>
+				</div>
+
+				<div class="mainContainer__card">
+					<h4 class="mainContainer__cardTitle">InternetQ</h4>
+					<p class="mainContainer__subTitle">Community Manager / Website administrator / Copywriter</p>
+					<p class="mainContainer__date">August 2010 – August 2012</p>
+					<ul class="mainContainer__list">
+						<li>Website Administrator</li>
+						<li>Community Manager for the Spanish market</li>
+						<li>Spanish Language Translator / Copywriter</li>
+						<li>Trainer for New Translators / Copywriters</li>
+						<li>Coordination of Activities to Test New Services</li>
+						<li>Tester of new functionalities and new releases</li>
+					</ul>
+				</div>
+				
+				<div class="mainContainer__card">
+					<h4 class="mainContainer__cardTitle">Teleperformance Greece</h4>
+					<p class="mainContainer__subTitle">Customer Support Agent</p>
+					<p class="mainContainer__date">April 2007 – May 2009</p>
+					<p>Customer support for financial services andmoney transfer. Supporting customers in English, Spanish and Greek.</p>
+				</div>
+			</section>
+
+			<section class="mainContainer__section" id="education">
+				<h3 class="mainContainer__title">Education</h3>
+
+				<div class="mainContainer__card">
+					<h4 class="mainContainer__cardTitle">Universitat Oberta de Catalunya</h4>
+					<p class="mainContainer__subTitle">Master's Degree: Website and Web Applications Development</p>
+					<p class="mainContainer__date">September 2019 – Today</p>
+				</div>
+
+				<div class="mainContainer__card">
+					<h4 class="mainContainer__cardTitle">I.E.K Intergraphics</h4>
+					<p class="mainContainer__subTitle">Certificate: Web Development & Design</p>
+					<p class="mainContainer__date">November 2012 – July 2013</p>
+					<ul class="mainContainer__list">
+						<li>Front-end development: HTML, CSS, Javascript, jQuery, Json</li>
+						<li>Back-end development: PHP, MySQL</li>
+						<li>CMS: Wordpress, Joomla</li>
+						<li>Design: Photoshop, Ilustrator, Dreamweaver, Flash</li>
+					</ul>
+				</div>
+
+				<div class="mainContainer__card">
+					<h4 class="mainContainer__cardTitle">University of Athens</h4>
+					<p class="mainContainer__subTitle">Bachelors Degree: Communications and Mass Media</p>
+					<p class="mainContainer__date">September 2006 – February 2013</p>
+				</div>
+
+				<div class="mainContainer__card">
+					<h4 class="mainContainer__cardTitle">University of Santiago de Compostela</h4>
+					<p class="mainContainer__subTitle">ERASMUS program</p>
+					<p class="mainContainer__date">February 2010 – June 2010</p>
+				</div>
+
+				<div class="mainContainer__card">
+					<h4 class="mainContainer__cardTitle">School of Translation Studies, «meta-φραση»</h4>
+					<p class="mainContainer__subTitle">Certificate: English – Greek Translation</p>
+					<p class="mainContainer__date">2005 – 2006</p>
+				</div>
+			</section>
+
+			<section class="mainContainer__section mainContainer__section--languages" id="languages">
+				<h3 class="mainContainer__title">Languages</h3>
+
+				<div class="mainContainer__card">
+					<ul class="mainContainer__list">
+						<li>Spanish (Native proficiency)</li>
+						<li>Greek (Native proficiency)</li>
+						<li>English (Full professional proficiency)</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footerContainer" id="footer">
+			<h3 class="footerContainer__title">Contact</h3>
+			<div class="footerContainer__text">
+				<a class="footerContainer__link" href="mailto:angelosvart@gmail.com"><i class="footerContainer__icon fas fa-at"></i>angelosvart@gmail.com</a>
+				<a class="footerContainer__link" href="https://www.linkedin.com/in/angelosvart"><i class="footerContainer__icon fab fa-linkedin"></i>linkedin.com/in/angelosvart</a>
+			</div>
+		</footer>
+
+		<script src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+	</body>
 </html>

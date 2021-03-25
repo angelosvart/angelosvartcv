@@ -1,21 +1,202 @@
+html {
+	scroll-behavior: smooth;
+	height: 100%;
+}
+
 body {
-  margin: 0;
-  padding: 30px;
-  font-family: $font-family-sans-serif;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
+	font-family: $font-family-main;
+	background-color: $color-light;
+	color: $color-main;
+	font-size: 16px;
+	height: 100%;
 }
 
-.uoc-logo {
-  display: block;
-  margin-bottom: 20px;
-  width: 300px;
-  height: auto;
+/*Header section*/
+.headerContainer {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-rows: 2fr 1fr 5%;
+	padding: 1rem;
+	&__mainTitle {
+		@include title-h1();
+		align-self: end;
+		animation: 0.7s ease-out 0s 1 slideIn;
+	}
+	&__subTitle {
+		@include title-h2();
+		align-self: start;
+		animation: 0.7s ease-out 0s 1 slideIn;
+	}
+	&__arrow {
+		justify-self: center;
+		font-size: 2rem;
+		animation: arrow-bounce 2s infinite;
+		color: $color-main;
+		transition: 0.5s;
+		&:hover {
+			color: $color-highlight;
+		}
+	}
+	@media (min-width: 768px) {
+		padding: 1rem 2rem;
+	}
 }
 
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 36px;
-  font-weight: 700;
-  color: $uoc-corporate;
+/*Navigation menu*/
+.navigationMenu {
+	background-color: $color-main;
+	position: sticky;
+	top: 0;
+	overflow-x: hidden;
+	z-index: 1;
+	box-shadow: 2px 3px 5px $color-dark-shadow;
+	display: flex;
+	place-content: center;
+	&__list {
+		list-style: none;
+		white-space: nowrap;
+		overflow-x: scroll;
+		scrollbar-width: none;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+	&__listItem {
+		margin: 1rem 0;
+		padding: 0 1rem;
+		display: inline-block;
+		vertical-align: middle;
+		border-right: 2px solid $color-darker;
+		&:last-child {
+			border: 0;
+		}
+		a {
+			text-decoration: none;
+			color: $color-light;
+			letter-spacing: 1px;
+			font-size: .9rem;
+			transition: 0.5s;
+			&:hover {
+				color: $color-darker;
+			}
+		}
+	}
+}
+
+/*Main section*/
+.mainContainer {
+	display: grid;
+	&__section {
+		padding: 3rem 1rem 1rem 1rem;
+		margin-top: -2rem;
+		display: grid;
+		row-gap: 2rem;
+	}
+	&__title {
+		@include title-h3();
+	}
+	&__card {
+		display: grid;
+		padding: 1.5rem;
+		row-gap: .7rem;
+		box-shadow: 
+			8px 8px 16px 0 $color-dark-shadow,
+			-8px -8px 12px 0 $color-light-shadow;
+		border-radius: 20px;
+	}
+	&__cardTitle {
+		@include title-h4();
+	}
+	&__subTitle {
+		font-size: 1rem;
+		font-weight: 600;
+	}
+	&__date {
+		font-size: .8rem;
+		color: $color-darker;
+		font-style: italic;
+	}
+	&__list {
+		list-style: none;
+		padding-left: 1.5rem;
+		li {
+			margin-bottom: .5rem;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&:before {
+				content: "\2022";
+				color: $color-highlight;
+				font-weight: bold;
+				display: inline-block;
+				width: 1.5rem;
+				margin-left: -1.5rem;
+			}
+		}
+	}
+	@media (min-width: 1024px) {
+		&__section {
+			padding: 3rem 4rem 1rem 4rem;
+		}
+		&__card {
+			grid-template-columns: 1fr 2fr;
+			column-gap: 2rem;
+		}
+	}
+	@media (min-width: 1200px) {
+		&__section {
+			padding: 3rem 6rem 1rem 6rem;
+			grid-template-columns: 1fr;
+			row-gap: 3rem;
+		}
+		&__card {
+			width: 80%;
+			grid-template-columns: 1fr;
+			justify-self: center;
+			&:nth-child(odd) {
+				margin-left: 4rem;
+			}
+			&:nth-child(even) {
+				margin-right: 4rem;
+			}
+		}
+	}
+}
+
+/*Footer section*/
+.footerContainer {
+	margin-top: 3rem;
+	padding: 5rem 1rem 2rem 1rem;
+	background: linear-gradient(to bottom, $color-main 0%, $color-main 80%, rgba($color-highlight, 40%) 100%), $color-main no-repeat;
+	clip-path: ellipse(121% 86% at 85% 90%);
+	&__title {
+		@include title-h3-footer();
+	}
+	&__text {
+		padding: 1rem;
+		color: $color-light;
+	}
+	&__link {
+		text-decoration: none;
+		display: block;
+		margin: 1rem 0;
+		color: $color-light;
+		transition: 0.5s;
+		&:hover {
+			color: $color-darker;
+		}
+	}
+	&__icon {
+		font-size: 2rem;
+		vertical-align: middle;
+		margin-right: .5rem;
+	}
+	@media (min-width: 1024px) {
+		&__text {
+			justify-self: end;
+			text-align: right;
+			margin-right: 5rem;
+		}
+	}
 }
